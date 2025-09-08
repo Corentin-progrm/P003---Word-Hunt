@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WordHunt (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WordHunt (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
