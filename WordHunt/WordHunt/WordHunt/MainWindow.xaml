@@ -1,19 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Window
     x:Class="WordHunt.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WordHunt"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="WordHunt">
+    Title="Word Game">
 
-    <Window.SystemBackdrop>
-        <MicaBackdrop />
-    </Window.SystemBackdrop>
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-    <Grid>
+        <!-- Titre -->
+        <TextBlock Text="Word Finder Game" 
+                   FontSize="28" 
+                   FontWeight="Bold"/>
 
+        <!-- Explication des règles -->
+        <TextBlock Grid.Row="1"
+                   Text="Tapez un mot dans la barre ci-dessous. Si le mot existe dans le dictionnaire et n’a pas encore été trouvé, il sera ajouté à votre collection."
+                   TextWrapping="Wrap"
+                   Foreground="Gray"
+                   Margin="0,5,0,20"/>
+
+        <!-- Zone de recherche -->
+        <StackPanel Grid.Row="2">
+            <TextBox x:Name="SearchBox" PlaceholderText="Type a word..." Margin="0,0,0,5"/>
+            <Button Content="Check" Click="Check_Click" Width="100"/>
+            <TextBlock x:Name="ErrorMessage" Foreground="Red" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <!-- Contenu principal -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="30">
+
+            <!-- Graphique donut -->
+            <Grid Width="200" Height="200">
+                <Ellipse Stroke="LightGray" StrokeThickness="30"/>
+                <Path x:Name="ProgressArc" Stroke="Green" StrokeThickness="30" Data=""/>
+                <TextBlock x:Name="ProgressPercent" 
+                           Text="0%" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Liste des mots trouvés -->
+            <StackPanel>
+                <TextBlock Text="Words Found:" FontWeight="Bold"/>
+                <ListBox x:Name="FoundWordsList" Height="150" Width="200"/>
+                <TextBlock x:Name="Counter" FontWeight="Bold" Margin="0,10,0,0"/>
+                <Button Content="README" Click="Readme_Click" Margin="0,20,0,0"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

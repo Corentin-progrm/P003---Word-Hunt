@@ -1,0 +1,18 @@
+[
+  {
+    "word": "apple",
+    "found": false
+  },
+  {
+    "word": "banana",
+    "found": false
+  },
+  {
+    "word": "orange",
+    "found": false
+  },
+  {
+    "word": "grape",
+    "found": false
+  }
+]
