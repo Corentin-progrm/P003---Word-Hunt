@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WordHunt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0698f00bbce98cd3e65cf23e8f9cda4a82d3bc5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+005144aca980dc55eced1ab22a4d6cf5ca60e9c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("WordHunt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WordHunt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
