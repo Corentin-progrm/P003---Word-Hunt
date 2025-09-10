@@ -1,3 +1,4 @@
+E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\dictionary.json
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\CoreMessagingXP.dll
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\dcompi.dll
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\dwmcorei.dll
@@ -525,4 +526,3 @@ E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
 E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ProjectArchitectures.txt
-E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\dictionary.json

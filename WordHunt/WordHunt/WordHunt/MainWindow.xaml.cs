@@ -1,11 +1,15 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.IO;
 using System.Text.Json;
+using Windows.Foundation;
 using Windows.UI;
+using WinRT.Interop;
 
 namespace WordHunt
 {
@@ -16,6 +20,16 @@ namespace WordHunt
         public MainWindow()
         {
             this.InitializeComponent();
+
+            // Maximiser la fenêtre
+            var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+            var appWindow = AppWindow.GetFromWindowId(windowId);
+            if (appWindow.Presenter is OverlappedPresenter presenter)
+            {
+                presenter.Maximize();
+            }
+
             LoadDictionary();
             UpdateUI();
         }
@@ -23,7 +37,6 @@ namespace WordHunt
         private void LoadDictionary()
         {
             string path = Path.Combine(AppContext.BaseDirectory, "Assets", "dictionary.json");
-
             if (File.Exists(path))
             {
                 string json = File.ReadAllText(path);
@@ -49,11 +62,11 @@ namespace WordHunt
 
             if (entry == null)
             {
-                ErrorMessage.Text = "❌ This word is not in the dictionary.";
+                ErrorMessage.Text = "❌ Ce mot n'est pas dans le dictionnaire.";
             }
             else if (entry.found)
             {
-                ErrorMessage.Text = "⚠️ You already found this word.";
+                ErrorMessage.Text = "⚠️ Vous avez déjà trouvé ce mot.";
             }
             else
             {
@@ -82,49 +95,36 @@ namespace WordHunt
 
             double angle = 360 * progress;
             double radians = (angle - 90) * Math.PI / 180.0;
-            double radius = 70;
+            double radius = 120;
 
-            double startX = 100;
-            double startY = 30; // top of the circle
-            double endX = 100 + radius * Math.Cos(radians);
-            double endY = 100 + radius * Math.Sin(radians);
+            double startX = 150;
+            double startY = 30;
+            double endX = 150 + radius * Math.Cos(radians);
+            double endY = 150 + radius * Math.Sin(radians);
 
             bool isLargeArc = angle > 180;
 
-            // Build arc geometry manually
             PathFigure figure = new PathFigure
             {
-                StartPoint = new Windows.Foundation.Point(startX, startY),
+                StartPoint = new Point(startX, startY),
                 IsClosed = false
             };
 
             ArcSegment arc = new ArcSegment
             {
-                Point = new Windows.Foundation.Point(endX, endY),
-                Size = new Windows.Foundation.Size(radius, radius),
+                Point = new Point(endX, endY),
+                Size = new Size(radius, radius),
                 SweepDirection = SweepDirection.Clockwise,
                 IsLargeArc = isLargeArc
             };
 
+            figure.Segments.Clear();
             figure.Segments.Add(arc);
 
             PathGeometry geometry = new PathGeometry();
             geometry.Figures.Add(figure);
 
             ProgressArc.Data = geometry;
-        }
-
-
-        private async void Readme_Click(object sender, RoutedEventArgs e)
-        {
-            ContentDialog dialog = new ContentDialog()
-            {
-                Title = "About the Game",
-                Content = "Word Finder Game\n\nAuthor: Ton Nom\nVersion: 1.0\n\nBut du jeu : trouver tous les mots du dictionnaire !",
-                CloseButtonText = "Close",
-                XamlRoot = this.Content.XamlRoot
-            };
-            await dialog.ShowAsync();
         }
     }
 

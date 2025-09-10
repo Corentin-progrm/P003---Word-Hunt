@@ -29,25 +29,25 @@
     <AppXManifest Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-09T00:38:36.101</Modified>
+      <Modified>2025-09-09T04:24:06.190</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-09-09T00:38:35.684</Modified>
+      <Modified>2025-09-09T04:24:05.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WordHunt.runtimeconfig.json">
       <PackagePath>WordHunt.runtimeconfig.json</PackagePath>
-      <Modified>2025-09-09T00:02:37.224</Modified>
+      <Modified>2025-09-09T04:24:05.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WordHunt.dll">
       <PackagePath>WordHunt.dll</PackagePath>
-      <Modified>2025-09-09T00:38:35.152</Modified>
+      <Modified>2025-09-09T04:24:04.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>WordHunt.exe</PackagePath>
-      <Modified>2025-09-09T00:38:35.159</Modified>
+      <Modified>2025-09-09T04:24:04.375</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\Assets\dictionary.json">
       <PackagePath>Assets\dictionary.json</PackagePath>
@@ -1975,7 +1975,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WordHunt.deps.json">
       <PackagePath>WordHunt.deps.json</PackagePath>
-      <Modified>2025-09-09T00:08:07.651</Modified>
+      <Modified>2025-09-09T04:24:05.055</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
