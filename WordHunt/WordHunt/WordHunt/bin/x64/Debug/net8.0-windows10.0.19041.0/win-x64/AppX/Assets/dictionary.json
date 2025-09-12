@@ -15209,7 +15209,7 @@
   },
   {
     "word": "b",
-    "found": false
+    "found": true
   },
   {
     "word": "baba",
@@ -25581,7 +25581,7 @@
   },
   {
     "word": "c",
-    "found": false
+    "found": true
   },
   {
     "word": "c\u0027est-\u00E0-dire",
@@ -31969,7 +31969,7 @@
   },
   {
     "word": "chat",
-    "found": false
+    "found": true
   },
   {
     "word": "chat-huant",
@@ -42865,7 +42865,7 @@
   },
   {
     "word": "coucou",
-    "found": false
+    "found": true
   },
   {
     "word": "coude",
@@ -47481,7 +47481,7 @@
   },
   {
     "word": "de",
-    "found": false
+    "found": true
   },
   {
     "word": "de amicis",
@@ -97313,7 +97313,7 @@
   },
   {
     "word": "la",
-    "found": false
+    "found": true
   },
   {
     "word": "la plata",
@@ -102509,7 +102509,7 @@
   },
   {
     "word": "ma",
-    "found": false
+    "found": true
   },
   {
     "word": "ma-jong",
@@ -104205,7 +104205,7 @@
   },
   {
     "word": "manger",
-    "found": false
+    "found": true
   },
   {
     "word": "mangerie",
@@ -116613,7 +116613,7 @@
   },
   {
     "word": "non",
-    "found": false
+    "found": true
   },
   {
     "word": "non troppo",
@@ -121361,7 +121361,7 @@
   },
   {
     "word": "oui",
-    "found": false
+    "found": true
   },
   {
     "word": "oui-da",
@@ -177005,7 +177005,7 @@
   },
   {
     "word": "v",
-    "found": false
+    "found": true
   },
   {
     "word": "va",

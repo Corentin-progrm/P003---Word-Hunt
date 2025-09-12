@@ -1,0 +1,11 @@
+﻿<Page
+    x:Class="WordHunt.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WordHunt.Views">
+
+    <Grid>
+        <TextBlock Text="Bienvenue sur la Page 1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+    </Grid>
+</Page>
+

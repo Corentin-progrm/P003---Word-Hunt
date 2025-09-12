@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="WordHunt.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WordHunt.Views">
+    <Grid Padding="20" RowSpacing="20">
+        <!-- Définition des lignes -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="Auto"/>
+            <!-- Search -->
+            <RowDefinition Height="*"/>
+            <!-- Contenu principal -->
+            <RowDefinition Height="Auto"/>
+            <!-- Message d'erreur -->
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <TextBlock Text="WORD HUNTER"
+						Style="{ThemeResource TitleTextBlockStyle}"
+						HorizontalAlignment="Center"/>
+            <TextBlock Text="GAMES"
+						Style="{ThemeResource SubtitleTextBlockStyle}"
+						HorizontalAlignment="Center"/>
+            <TextBlock Text="Le jeu des mots"
+						Style="{ThemeResource BodyTextBlockStyle}"
+						HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Zone de recherche -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+					HorizontalAlignment="Center" Spacing="10">
+            <AutoSuggestBox x:ConnectionId='8' x:Name="SearchBox" 
+							MinWidth="150" MaxWidth="300" Width="200"
+							PlaceholderText="Entrez un mot..."
+							AutomationProperties.Name="Zone de saisie de mot"/>
+            <Button x:ConnectionId='9' Content="Check"                    
+					AutomationProperties.Name="Vérifier le mot"/>
+        </StackPanel>
+
+        <!-- Zone principale -->
+        <Grid Grid.Row="2" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Liste mots trouvés -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Progress Donut -->
+                <ColumnDefinition Width="*"/>
+                <!-- Liste mots essayés -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Liste mots trouvés -->
+            <StackPanel Grid.Column="0" Margin="0,0,0,0">
+                <TextBlock Text="Liste mots trouvés"
+							Style="{ThemeResource SubtitleTextBlockStyle}" 
+							Margin="0,0,0,10"/>
+                <ListView x:ConnectionId='7' x:Name="FoundWordsList" Height="300"
+						  AutomationProperties.Name="Liste des mots trouvés"/>
+            </StackPanel>
+
+            <!-- Donut / pourcentage trouvé -->
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Canvas Width="120" Height="120" Margin="0,0,0,10">
+                    <!-- Cercle de fond -->
+                    <Ellipse Width="120" Height="120" 
+							 Stroke="LightGray" 
+							 StrokeThickness="8" 
+							 Fill="Transparent"/>
+                    <!-- Arc de progression -->
+                    <Path x:ConnectionId='6' x:Name="ProgressArc" 
+						  Stroke="DodgerBlue" 
+						  StrokeThickness="8"/>
+                </Canvas>
+                <TextBlock x:ConnectionId='4' x:Name="ProgressPercent" Text="0%"
+							FontSize="24" FontWeight="Bold" 
+							HorizontalAlignment="Center"/>
+                <TextBlock x:ConnectionId='5' x:Name="Counter"
+							FontSize="18"
+							FontWeight="SemiBold"
+							HorizontalAlignment="Center"
+							Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <!-- Liste mots essayés -->
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Liste mots essayés"
+							Style="{ThemeResource SubtitleTextBlockStyle}" 
+							Margin="0,0,0,10"/>
+                <ListView x:ConnectionId='3' x:Name="TriedWordsList" Height="300"
+						  AutomationProperties.Name="Liste des mots essayés"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Message d'erreur -->
+        <TextBlock x:ConnectionId='2' x:Name="ErrorMessage" 
+				   Foreground="Red" 
+				   Grid.Row="3"
+				   HorizontalAlignment="Center" 
+				   Margin="0,10,0,0"
+				   AutomationProperties.LiveSetting="Polite"/>
+    </Grid>
+</Page>
+
