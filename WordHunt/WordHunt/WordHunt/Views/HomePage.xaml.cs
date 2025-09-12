@@ -1,6 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Windows.Foundation;
+
 
 namespace WordHunt.Views
 {
@@ -66,16 +69,16 @@ namespace WordHunt.Views
                         foundWordsCount++;
                     }
 
-                    ErrorMessage.Text = $"Dictionnaire chargé: {totalWords} mots";
+                    ErrorMessage.Text = $"LOG : Dictionnaire chargé: {totalWords} mots";
                 }
                 else
                 {
-                    ErrorMessage.Text = "Fichier dictionary.json introuvable dans Assets";
+                    ErrorMessage.Text = "LOG : Fichier dictionary.json introuvable dans Assets";
                 }
             }
             catch (Exception ex)
             {
-                ErrorMessage.Text = $"Erreur chargement: {ex.Message}";
+                ErrorMessage.Text = $"LOG : Erreur chargement: {ex.Message}";
             }
         }
 
@@ -83,16 +86,15 @@ namespace WordHunt.Views
         {
             try
             {
-                // Utiliser la même méthode que votre code qui fonctionne
                 string path = Path.Combine(AppContext.BaseDirectory, "Assets", "dictionary.json");
                 string json = JsonSerializer.Serialize(dictionary, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(path, json);
 
-                ErrorMessage.Text = "Sauvegardé !";
+                ErrorMessage.Text = "LOG : Sauvegardé !";
             }
             catch (Exception ex)
             {
-                ErrorMessage.Text = $"Erreur sauvegarde: {ex.Message}";
+                ErrorMessage.Text = $"LOG : Erreur sauvegarde: {ex.Message}";
             }
         }
 
@@ -128,13 +130,6 @@ namespace WordHunt.Views
                 return;
             }
 
-            // Vérifier si l'entrée contient seulement des lettres et des accents
-            if (!IsValidWord(userInput))
-            {
-                ErrorMessage.Text = "Le mot contient des caractères non valides";
-                return;
-            }
-
             // Normaliser le mot pour la comparaison (supprimer accents et mettre en minuscules)
             string normalizedInput = NormalizeWord(userInput);
 
@@ -145,7 +140,7 @@ namespace WordHunt.Views
             if (foundWord == null)
             {
                 // Mot n'existe pas dans le dictionnaire
-                ErrorMessage.Text = "Le mot n'existe pas dans le dictionnaire";
+                ErrorMessage.Text = "LOG : Le mot n'existe pas dans le dictionnaire";
 
                 // Ajouter à la liste des mots essayés s'il n'y est pas déjà
                 if (!triedWords.Contains(userInput, StringComparer.OrdinalIgnoreCase))
@@ -158,13 +153,14 @@ namespace WordHunt.Views
                 if (foundWord.found)
                 {
                     // Mot déjà trouvé
-                    ErrorMessage.Text = "Ce mot a déjà été trouvé";
+                    ErrorMessage.Text = "LOG : Ce mot a déjà été trouvé";
                 }
                 else
                 {
                     // Nouveau mot trouvé !
                     foundWord.found = true;
                     foundWordsCount++;
+                    SearchBox.Text = "";
 
                     // Ajouter à la liste des mots trouvés
                     foundWords.Insert(0, foundWord.word); // Insérer au début de la liste
@@ -176,12 +172,6 @@ namespace WordHunt.Views
                     UpdateProgress();
                 }
             }
-        }
-
-        private bool IsValidWord(string word)
-        {
-            // Regex pour vérifier que le mot contient seulement des lettres (avec accents)
-            return Regex.IsMatch(word, @"^[a-zA-ZÀ-ÿ]+$");
         }
 
         private string NormalizeWord(string word)
@@ -218,10 +208,53 @@ namespace WordHunt.Views
             // Calculer le pourcentage
             double percentage = (double)foundWordsCount / totalWords * 100;
 
-            // Mettre à jour les textes - SEULEMENT le pourcentage et le compteur
-            ProgressPercent.Text = $"{percentage:F3}%";
+            // Mettre à jour les textes
+            ProgressPercent.Text = $"{percentage:F2}%";
             Counter.Text = $"{foundWordsCount} / {totalWords}";
+
+            // Mettre à jour l'arc
+            DrawProgressArc(percentage);
         }
+
+        private void DrawProgressArc(double percentage)
+        {
+            double radius = 56; // rayon = moitié du Canvas
+            double centerX = 60;
+            double centerY = 60;
+
+            double angle = percentage / 100 * 360;
+
+            // Convertir en radians
+            double radians = (Math.PI / 180) * (angle - 90); // -90 pour commencer en haut
+
+            double x = centerX + radius * Math.Cos(radians);
+            double y = centerY + radius * Math.Sin(radians);
+
+            bool isLargeArc = angle > 180;
+
+            PathFigure figure = new PathFigure();
+            figure.StartPoint = new Point(centerX, centerY - radius); // Point de départ en haut
+
+            ArcSegment arc = new ArcSegment();
+            arc.Point = new Point(x, y);
+            arc.Size = new Size(radius, radius);
+            arc.IsLargeArc = isLargeArc;
+            arc.SweepDirection = SweepDirection.Clockwise;
+
+            PathSegmentCollection segments = new PathSegmentCollection();
+            segments.Add(arc);
+
+            figure.Segments = segments;
+
+            PathFigureCollection figures = new PathFigureCollection();
+            figures.Add(figure);
+
+            PathGeometry geometry = new PathGeometry();
+            geometry.Figures = figures;
+
+            ProgressArc.Data = geometry;
+        }
+
     }
 
     // Classe pour représenter un mot du dictionnaire

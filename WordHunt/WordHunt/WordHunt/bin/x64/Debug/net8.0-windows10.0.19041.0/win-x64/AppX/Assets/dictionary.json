@@ -1,21 +1,5 @@
 [
   {
-    "word": "2e",
-    "found": false
-  },
-  {
-    "word": "3_lemme",
-    "found": false
-  },
-  {
-    "word": "58e",
-    "found": false
-  },
-  {
-    "word": "7e",
-    "found": false
-  },
-  {
     "word": "a",
     "found": true
   },
@@ -9417,7 +9401,7 @@
   },
   {
     "word": "appel",
-    "found": false
+    "found": true
   },
   {
     "word": "appelant",
@@ -18289,7 +18273,7 @@
   },
   {
     "word": "bernard-l\u0027ermite",
-    "found": false
+    "found": true
   },
   {
     "word": "bernard-l\u0027hermite",
@@ -19729,7 +19713,7 @@
   },
   {
     "word": "bite",
-    "found": true
+    "found": false
   },
   {
     "word": "biter",
@@ -21013,7 +20997,7 @@
   },
   {
     "word": "bonjour",
-    "found": false
+    "found": true
   },
   {
     "word": "bonnard",
@@ -25085,7 +25069,7 @@
   },
   {
     "word": "b\u00E9",
-    "found": false
+    "found": true
   },
   {
     "word": "b\u00E9ance",
@@ -27389,7 +27373,7 @@
   },
   {
     "word": "canard",
-    "found": true
+    "found": false
   },
   {
     "word": "canardeau",
@@ -31969,7 +31953,7 @@
   },
   {
     "word": "chat",
-    "found": true
+    "found": false
   },
   {
     "word": "chat-huant",
@@ -41465,7 +41449,7 @@
   },
   {
     "word": "cool",
-    "found": false
+    "found": true
   },
   {
     "word": "coolie",
@@ -42865,7 +42849,7 @@
   },
   {
     "word": "coucou",
-    "found": true
+    "found": false
   },
   {
     "word": "coude",
@@ -46925,7 +46909,7 @@
   },
   {
     "word": "d",
-    "found": false
+    "found": true
   },
   {
     "word": "d\u0027",
@@ -47481,7 +47465,7 @@
   },
   {
     "word": "de",
-    "found": true
+    "found": false
   },
   {
     "word": "de amicis",
@@ -59605,7 +59589,7 @@
   },
   {
     "word": "e",
-    "found": false
+    "found": true
   },
   {
     "word": "e-commerce",
@@ -67369,7 +67353,7 @@
   },
   {
     "word": "f",
-    "found": false
+    "found": true
   },
   {
     "word": "fa",
@@ -74897,7 +74881,7 @@
   },
   {
     "word": "g",
-    "found": false
+    "found": true
   },
   {
     "word": "gaba",
@@ -86313,7 +86297,7 @@
   },
   {
     "word": "i",
-    "found": false
+    "found": true
   },
   {
     "word": "i.e.",
@@ -94693,7 +94677,7 @@
   },
   {
     "word": "j",
-    "found": false
+    "found": true
   },
   {
     "word": "jabadao",
@@ -96373,7 +96357,7 @@
   },
   {
     "word": "k",
-    "found": false
+    "found": true
   },
   {
     "word": "k-o",
@@ -97293,11 +97277,11 @@
   },
   {
     "word": "l",
-    "found": false
+    "found": true
   },
   {
     "word": "l\u0027",
-    "found": false
+    "found": true
   },
   {
     "word": "l\u0027un",
@@ -97313,7 +97297,7 @@
   },
   {
     "word": "la",
-    "found": true
+    "found": false
   },
   {
     "word": "la plata",
@@ -102501,7 +102485,7 @@
   },
   {
     "word": "m",
-    "found": false
+    "found": true
   },
   {
     "word": "m\u0027as-tu-vu",
@@ -102509,7 +102493,7 @@
   },
   {
     "word": "ma",
-    "found": true
+    "found": false
   },
   {
     "word": "ma-jong",
@@ -104205,7 +104189,7 @@
   },
   {
     "word": "manger",
-    "found": true
+    "found": false
   },
   {
     "word": "mangerie",
@@ -106477,7 +106461,7 @@
   },
   {
     "word": "me",
-    "found": false
+    "found": true
   },
   {
     "word": "mea culpa",
@@ -114841,7 +114825,7 @@
   },
   {
     "word": "n",
-    "found": false
+    "found": true
   },
   {
     "word": "n\u0027",
@@ -116613,7 +116597,7 @@
   },
   {
     "word": "non",
-    "found": true
+    "found": false
   },
   {
     "word": "non troppo",
@@ -118257,7 +118241,7 @@
   },
   {
     "word": "o",
-    "found": false
+    "found": true
   },
   {
     "word": "oaristys",
@@ -121361,7 +121345,7 @@
   },
   {
     "word": "oui",
-    "found": true
+    "found": false
   },
   {
     "word": "oui-da",
@@ -124965,7 +124949,7 @@
   },
   {
     "word": "patate",
-    "found": true
+    "found": false
   },
   {
     "word": "patati",
@@ -139625,7 +139609,7 @@
   },
   {
     "word": "q",
-    "found": false
+    "found": true
   },
   {
     "word": "qu",
@@ -140869,7 +140853,7 @@
   },
   {
     "word": "r",
-    "found": false
+    "found": true
   },
   {
     "word": "ra",
@@ -152985,7 +152969,7 @@
   },
   {
     "word": "s",
-    "found": false
+    "found": true
   },
   {
     "word": "s\u0027",
@@ -153877,7 +153861,7 @@
   },
   {
     "word": "salope",
-    "found": true
+    "found": false
   },
   {
     "word": "saloper",
@@ -166601,7 +166585,7 @@
   },
   {
     "word": "t",
-    "found": false
+    "found": true
   },
   {
     "word": "t\u0027",
@@ -170549,7 +170533,7 @@
   },
   {
     "word": "tomate",
-    "found": true
+    "found": false
   },
   {
     "word": "tombal",
@@ -176165,7 +176149,7 @@
   },
   {
     "word": "u",
-    "found": false
+    "found": true
   },
   {
     "word": "ubac",
@@ -181569,7 +181553,7 @@
   },
   {
     "word": "w",
-    "found": false
+    "found": true
   },
   {
     "word": "wagn\u00E9rien",
@@ -181849,7 +181833,7 @@
   },
   {
     "word": "x",
-    "found": false
+    "found": true
   },
   {
     "word": "xavier",
@@ -181925,7 +181909,7 @@
   },
   {
     "word": "y",
-    "found": false
+    "found": true
   },
   {
     "word": "ya",
@@ -182169,7 +182153,7 @@
   },
   {
     "word": "z",
-    "found": false
+    "found": true
   },
   {
     "word": "zader",

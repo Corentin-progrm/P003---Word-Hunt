@@ -4,7 +4,43 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WordHunt.Views">
 
-    <Grid>
-        <TextBlock Text="Bienvenue sur la Page 1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
-    </Grid>
+    <StackPanel Padding="20" Spacing="10">
+
+        <TextBlock Text="Word Hunter" 
+               FontSize="28" 
+               FontWeight="Bold" 
+               HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Infos" 
+                FontSize="20" 
+                FontWeight="Bold"/>
+
+        <TextBlock Text="Version : 1.0.0" FontSize="16"/>
+        <TextBlock Text="Auteur : Corentin Coueron" FontSize="16"/>
+        <TextBlock Text="Date : Septembre 2025" FontSize="16"/>
+
+        <TextBlock Text="Licence : Open Source (MIT)" FontSize="16"/>
+        <TextBlock Text="Le code source est disponible publiquement." FontSize="14"/>
+
+        <TextBlock Text="Regle du Jeu" 
+                FontSize="20" 
+                FontWeight="Bold"/>
+
+        <TextBlock FontSize="16">
+                Le jeu consiste a trouver tous les mots du dictionnaire.<LineBreak/>
+                Ce sont des mots en format elementaire, donc sans conjugaisons ni variations de genre ou de pluriel.<LineBreak/>
+                Vous pouvez ecrire avec ou sans accents, ils seront pris en compte.<LineBreak/>
+                En rouge clair, en bas de l'application, vous trouverez les logs qui ont servi au debogage de l'application.<LineBreak/>
+                <LineBreak/>
+                Amusez-vous bien sur ce tres long et barbant jeu !
+        </TextBlock>
+
+
+        <TextBlock Text="2025 Corentin Coueron" 
+                FontSize="14" 
+                Foreground="Gray"
+                HorizontalAlignment="Center"/>
+
+    </StackPanel>
+
 </Page>

@@ -29,13 +29,13 @@
     <AppXManifest Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-09-12T00:29:38.896</Modified>
+      <Modified>2025-09-12T02:26:48.087</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-09-11T23:28:51.267</Modified>
+      <Modified>2025-09-12T02:00:20.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WordHunt.runtimeconfig.json">
       <PackagePath>WordHunt.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WordHunt.dll">
       <PackagePath>WordHunt.dll</PackagePath>
-      <Modified>2025-09-12T00:29:38.214</Modified>
+      <Modified>2025-09-12T02:26:47.817</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>WordHunt.exe</PackagePath>
-      <Modified>2025-09-12T00:29:38.224</Modified>
+      <Modified>2025-09-12T02:26:47.817</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\P003 - Word Hunt\WordHunt\WordHunt\WordHunt\Assets\dictionary.json">
       <PackagePath>Assets\dictionary.json</PackagePath>
-      <Modified>2025-09-09T23:59:32.034</Modified>
+      <Modified>2025-09-12T02:01:00.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\coren\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.18\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

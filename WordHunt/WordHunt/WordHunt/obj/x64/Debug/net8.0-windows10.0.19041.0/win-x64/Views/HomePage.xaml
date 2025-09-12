@@ -17,14 +17,16 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,10">
             <TextBlock Text="WORD HUNTER"
-						Style="{ThemeResource TitleTextBlockStyle}"
+						Style="{ThemeResource DisplayTextBlockStyle}"
+                        Foreground="{ThemeResource AccentTextFillColorTertiaryBrush}"
 						HorizontalAlignment="Center"/>
             <TextBlock Text="GAMES"
-						Style="{ThemeResource SubtitleTextBlockStyle}"
+						Style="{ThemeResource DisplayTextBlockStyle}"
+                        Foreground="{ThemeResource SystemColorHighlightColor}"
 						HorizontalAlignment="Center"/>
-            <TextBlock Text="Le jeu des mots"
+            <TextBlock Text="Le jeu le plus stupide et le plus long du monde"
 						Style="{ThemeResource BodyTextBlockStyle}"
 						HorizontalAlignment="Center"/>
         </StackPanel>
@@ -95,7 +97,7 @@
 
         <!-- Message d'erreur -->
         <TextBlock x:ConnectionId='2' x:Name="ErrorMessage" 
-				   Foreground="Red" 
+				   Foreground="{ThemeResource SystemFillColorCriticalBackgroundBrush}" 
 				   Grid.Row="3"
 				   HorizontalAlignment="Center" 
 				   Margin="0,10,0,0"
